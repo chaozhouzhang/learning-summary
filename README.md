@@ -15,12 +15,14 @@ learning-summary
 
 |技能|参考|
 |---|---|
+|自定义View||
 |Framework||
 |Binder||
 |第三方框架|OkHttp、OkIo、RxJava、RxAndroid、Glide、EventBus、Retrofit|
 |NDK||
-|性能优化||
+|性能优化|卡顿优化、内存优化、页面渲染优化、WebView优化|
 |Hook|TurboDex、XPosed、Legend、Cydia Substrate|
+|逆向||
 
 ## 算法
 
@@ -37,5 +39,11 @@ learning-summary
 ## Gradle
 
 
+## 计算机网络
 
+|技能|参考|
+|---|---|
+|HTTP||
+|TCP/IP|
+|Socket|
 
