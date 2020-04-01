@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-04-01T02:48:30.611Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="ipnVgFgbyAFBchPimjkM" version="12.9.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-04-01T03:12:10.533Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="DfEW3Tq53R3D5tORjOXK" version="12.9.5" type="github" pages="2">
   <diagram id="osySlG6vOF2VXdflo7Ny" name="Page-1">
     <mxGraphModel dx="946" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -105,7 +105,7 @@
         <mxCell id="NDg6Oueld_C1ia3fCb1J-70" value="Receive the message and handle it" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" parent="1" vertex="1">
           <mxGeometry x="420" y="470" width="110" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="qWdJZLPwKeQH4qqhE-X6-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fontFamily=Comic Sans MS;dashed=1;strokeColor=#FF9999;" edge="1" parent="1" source="NDg6Oueld_C1ia3fCb1J-41" target="qWdJZLPwKeQH4qqhE-X6-4">
+        <mxCell id="qWdJZLPwKeQH4qqhE-X6-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fontFamily=Comic Sans MS;dashed=1;strokeColor=#FF3333;" edge="1" parent="1" source="NDg6Oueld_C1ia3fCb1J-41" target="qWdJZLPwKeQH4qqhE-X6-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="NDg6Oueld_C1ia3fCb1J-41" value="3、Looper.loop()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Comic Sans MS;" parent="1" vertex="1">
@@ -137,6 +137,9 @@
         </mxCell>
         <mxCell id="qWdJZLPwKeQH4qqhE-X6-4" value="6、Looper.MessageQueue.next()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Comic Sans MS;" vertex="1" parent="1">
           <mxGeometry x="660" y="130" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qWdJZLPwKeQH4qqhE-X6-17" value="loop" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Comic Sans MS;fontColor=#FF3333;" vertex="1" parent="1">
+          <mxGeometry x="710" y="200" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
