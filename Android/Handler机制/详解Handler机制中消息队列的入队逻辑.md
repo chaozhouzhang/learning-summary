@@ -135,15 +135,35 @@ public class MessageQueue {
     }
 }
 ```
-2.1、往空队列插入消息
-![]()
-2.2、在队列头插入消息
-
-2.3、在队列尾插入消息
-
-2.4、在队列中插入消息
+### 2.1、往空队列插入消息
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/Handler%E6%9C%BA%E5%88%B6/Handler-%E5%BE%80%E7%A9%BA%E9%98%9F%E5%88%97%E6%8F%92%E5%85%A5%E6%B6%88%E6%81%AF.png?raw=true)
+### 2.2、在队列头插入消息
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/Handler%E6%9C%BA%E5%88%B6/Handler-%E5%9C%A8%E9%98%9F%E5%88%97%E5%A4%B4%E6%8F%92%E5%85%A5%E6%B6%88%E6%81%AF.png?raw=true)
+### 2.3、在队列尾插入消息
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/Handler%E6%9C%BA%E5%88%B6/Handler-%E5%9C%A8%E9%98%9F%E5%88%97%E5%B0%BE%E6%8F%92%E5%85%A5%E6%B6%88%E6%81%AF.png?raw=true)
+### 2.4、在队列中插入消息
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/Handler%E6%9C%BA%E5%88%B6/Handler-%E5%9C%A8%E9%98%9F%E5%88%97%E4%B8%AD%E6%8F%92%E5%85%A5%E6%B6%88%E6%81%AF.png?raw=true)
 
 
 
 ## 3、消息入队时，什么情况下需要主动唤醒线程？
+
+### 3.1、队列中没有任何消息，且线程阻塞
+此时新消息入队后便主动唤醒线程，无论新消息是同步消息、异步消息。 
+
+### 3.2、队首的消息执行时间未到，且线程阻塞
+如果在阻塞时长未耗尽时，就新加入早于队首消息处理时间的消息，需要主动唤醒线程。
+1、如果入队消息的执行时间为0，也就是入队消息需要马上执行。
+2、如果入队消息的执行时间小于队首消息的执行时间，也就是入队消息要早于队首消息执行。
+
+### 3.3、队首消息是同步屏障消息，并且队列中不含有异步消息，且线程阻塞
+如果新加入的消息仍然是晚于队首同步障碍器处理时间，那么这次新消息的发布在next()层面上是毫无意义的，我们也不需要唤醒线程。
+只有在新加入早于队首同步障碍器处理时间的同步消息时，或者，新加入异步消息时（不论处理时间），才会主动唤醒被next()阻塞的线程。 
+
+### 3.4、队首消息是同步屏障消息，队列中含有异步消息但执行时间未到，切线程阻塞
+因为队首同步障碍器的缘故，无论新加入什么同步消息都不会主动唤醒线程。
+即使加入的是异步消息也需要其处理时间早于设定好唤醒时执行的异步消息，才会主动唤醒。
+
+欢迎关注Android技术堆栈，专注于Android技术学习的公众号，致力于提高Android开发者们的专业技能！
+![Android技术堆栈](https://mmbiz.qpic.cn/mmbiz_jpg/MADc6NnIysDjTRbKsg6y2G5eqqQkPDiak4V8jqKLmntDgAfFE8LOibxnSdfJESLJEM8ibrN9RGiamib4rYCt3cU08aQ/0?wx_fmt=jpeg)
 
