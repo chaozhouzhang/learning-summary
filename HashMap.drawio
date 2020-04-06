@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-04-06T01:45:39.010Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="pZjgZvExBqEgSRGcJMHH" version="12.9.6" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2020-04-06T03:10:33.095Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="ckFp7m3bS3Fz7NMT4if0" version="12.9.6" type="github" pages="3">
   <diagram id="8V5dtoAIcNinE1zWuWp3" name="Page-1">
     <mxGraphModel dx="1426" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -202,37 +202,46 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="o_QbdtVdACUE5qeTqP2a" name="Page-3">
-    <mxGraphModel dx="1426" dy="710" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="o_QbdtVdACUE5qeTqP2a" name="计算存储位置">
+    <mxGraphModel dx="946" dy="623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="mInNOV8SeNAIjrkM026Y-0" />
         <mxCell id="mInNOV8SeNAIjrkM026Y-1" parent="mInNOV8SeNAIjrkM026Y-0" />
         <mxCell id="mInNOV8SeNAIjrkM026Y-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
-          <mxGeometry x="40" y="40" width="760" height="420" as="geometry" />
+          <mxGeometry x="40" y="40" width="600" height="400" as="geometry" />
         </mxCell>
-        <mxCell id="mInNOV8SeNAIjrkM026Y-3" value="key.hashCode()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
-          <mxGeometry x="80" y="80" width="120" height="40" as="geometry" />
+        <mxCell id="mInNOV8SeNAIjrkM026Y-3" value="h = key.hashCode() =&amp;nbsp;&lt;span style=&quot;text-align: left ; white-space: nowrap&quot;&gt;-861391249&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
+          <mxGeometry x="80" y="80" width="220" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mInNOV8SeNAIjrkM026Y-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
-          <mxGeometry x="310" y="340" width="240" height="100" as="geometry" />
+          <mxGeometry x="320" y="310" width="290" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="mInNOV8SeNAIjrkM026Y-7" value="&amp;nbsp; &amp;nbsp; &amp;nbsp;10100101 11000100 00100101&lt;br&gt;&amp;amp;&amp;nbsp; &amp;nbsp;00000000 00000000 00001111&lt;br&gt;-----------------------------------------------&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;00000000 00000000 00000101" style="text;html=1;fontColor=#000000;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
-          <mxGeometry x="330" y="355" width="200" height="70" as="geometry" />
+        <mxCell id="mInNOV8SeNAIjrkM026Y-7" value="&amp;nbsp; &amp;nbsp; &amp;nbsp;1100 1100 1010 1000 1111 1010 1100 0111&lt;br&gt;&amp;amp;&amp;nbsp; &amp;nbsp;0000 0000 0000 0000 0000 0000 0000 1111&lt;br&gt;---------------------------------------------------------------&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;0000 0000 0000 0000 0000 0000 0000 0111" style="text;html=1;fontColor=#000000;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
+          <mxGeometry x="340" y="325" width="260" height="70" as="geometry" />
         </mxCell>
         <mxCell id="mInNOV8SeNAIjrkM026Y-8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
-          <mxGeometry x="310" y="190" width="290" height="100" as="geometry" />
+          <mxGeometry x="320" y="190" width="290" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="mInNOV8SeNAIjrkM026Y-10" value="&amp;nbsp; &amp;nbsp; &amp;nbsp;-0011 0011 0101 0111 1100 1001 1001 0001&lt;br&gt;&amp;amp;&amp;nbsp; &amp;nbsp;-0011 0011 0101 0111 1100 1001 1001 0001&lt;br&gt;----------------------------------------------------------------&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;00000000 00000000 00000101" style="text;html=1;fontColor=#000000;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
-          <mxGeometry x="330" y="205" width="260" height="70" as="geometry" />
+        <mxCell id="mInNOV8SeNAIjrkM026Y-10" value="&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;text-align: center ; white-space: normal&quot;&gt;1100 1100 1010 1000 0011 0110 0110 1111&lt;/span&gt;&lt;br&gt;^&amp;nbsp; &amp;nbsp;0000 0000 0000 0000 1100 1100 1010 1000&lt;br&gt;----------------------------------------------------------------&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;1100 1100 1010 1000 1111 1010 1100 0111" style="text;html=1;fontColor=#000000;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
+          <mxGeometry x="340" y="205" width="260" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="mInNOV8SeNAIjrkM026Y-11" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
-          <mxGeometry x="490" y="80" width="290" height="40" as="geometry" />
+        <mxCell id="mInNOV8SeNAIjrkM026Y-11" value="1100 1100 1010 1000 0011 0110 0110 1111" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
+          <mxGeometry x="320" y="80" width="290" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mInNOV8SeNAIjrkM026Y-12" value="-0011 0011 0101 0111 1100 1001 1001 0001" style="text;html=1;fontColor=#000000;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
-          <mxGeometry x="510" y="87.5" width="250" height="25" as="geometry" />
+        <mxCell id="mInNOV8SeNAIjrkM026Y-17" value="&lt;span style=&quot;text-align: left ; white-space: nowrap&quot;&gt;0000 0000 0000 0000 1100 1100 1010 1000&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
+          <mxGeometry x="320" y="130" width="290" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mInNOV8SeNAIjrkM026Y-13" value="&lt;span style=&quot;text-align: left ; white-space: nowrap&quot;&gt;-861391249&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
-          <mxGeometry x="294" y="80" width="120" height="40" as="geometry" />
+        <mxCell id="mInNOV8SeNAIjrkM026Y-19" value="h &amp;gt;&amp;gt;&amp;gt; 16 =&amp;nbsp;&lt;span style=&quot;text-align: left ; white-space: nowrap&quot;&gt;52392&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
+          <mxGeometry x="80" y="130" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mInNOV8SeNAIjrkM026Y-21" value="hash = h ^ (h &amp;gt;&amp;gt;&amp;gt; 16) =&amp;nbsp;&lt;span style=&quot;text-align: left ; white-space: nowrap&quot;&gt;-861340985&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
+          <mxGeometry x="80" y="190" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mInNOV8SeNAIjrkM026Y-22" value="i = (n-1) &amp;amp; hash =&amp;nbsp;&lt;span style=&quot;text-align: left ; white-space: nowrap&quot;&gt;7&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
+          <mxGeometry x="80" y="310" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mInNOV8SeNAIjrkM026Y-27" value="key= &quot;android&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" vertex="1" parent="mInNOV8SeNAIjrkM026Y-1">
+          <mxGeometry x="80" y="50" width="90" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
