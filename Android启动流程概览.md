@@ -1,7 +1,7 @@
 # Android操作系统启动流程
 
 
-这是一篇译文，原文地址请见：
+这是一篇译文，原英文地址请见：
 ```
 https://learnlinuxconcepts.blogspot.com/2014/02/android-boot-sequence.html?m=0
 ```
@@ -16,6 +16,7 @@ https://learnlinuxconcepts.blogspot.com/2014/02/android-boot-sequence.html?m=0
 |Init进程|它是Linux内核完成安装后启动的第一个进程。|
 
 让我们看看当用户按下电源开关按钮时会发生什么：
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android%20Boot%20Squence.png?raw=true)
 当我们按下android手机上的电源键时，启动过程就完成了。
 
 ## 步骤1、系统启动
@@ -26,6 +27,7 @@ https://learnlinuxconcepts.blogspot.com/2014/02/android-boot-sequence.html?m=0
 
 一旦引导媒体序列建立，引导ROM将尝试加载第一阶段的引导加载程序到内部RAM。一旦引导加载程序就位，引导ROM代码将执行跳转并继续在引导加载程序中执行。
 
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android_boot_1.png?raw=true)
 ## 步骤2、引导装载程序
 
 Bootloader的执行分为两个阶段，第一个阶段是检测外部RAM，第二个阶段是帮助加载程序，在第二个阶段Bootloader设置网络、内存等需要运行内核的时候，Bootloader可以为内核提供特定目的的配置参数或输入。
@@ -51,14 +53,18 @@ Android引导加载程序可以在以下位置发现：
 
 5、完成引导加载程序后，它将执行跳转到Linux内核，通常是一些解压缩例程，内核承担系统责任。
 
-## 3、Linux内核
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android_boot_2.png?raw=true)
+
+## 步骤3、Linux内核
 
 Linux内核在Android上启动的方式与在其他系统上类似。它将设置系统运行所需的一切。初始化中断控制器，设置内存保护，缓存和调度。
 
 一旦内存管理单元和缓存被初始化，系统将能够使用虚拟内存并启动用户空间进程。
 内核将在根文件系统中查找init进程(在Android开源树的system/core/init下找到)，并将其作为初始用户空间进程启动。
 
-## 4、init进程
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android_boot_3.png?raw=true)
+
+## 步骤4、init进程
 
 初始化它的第一个进程，我们可以说它是所有进程的根进程或祖母进程。
 init进程有两个职责：
@@ -77,7 +83,9 @@ init.rc文件可以在源代码树中找到：
 ```
 这是一个描述系统服务、文件系统和其他需要设置的参数的脚本。init.rc脚本被放置在Android开源项目的system/core/rootdir中。
 
-## 5、Zygote和Dalvik
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android_boot_4.png?raw=true)
+
+## 步骤5、Zygote和Dalvik
 
 在Java中，我们知道单独的虚拟机(VMs)实例会在内存中为单独的应用程序弹出，在Android应用程序应该尽快启动的情况下，如果Android os为每个应用程序启动不同的Dalvik VM实例，那么它会消耗大量的内存和时间。所以，为了解决这个问题，Android操作系统被命名为"Zygote"。
 
@@ -85,13 +93,14 @@ Zygote支持跨Dalvik虚拟机的共享代码，更低的内存占用和最小�
 
 Zygote是一个VM进程，它在系统启动时启动，我们在前面的步骤中已经知道了。
 
-合子预加载并初始化核心库类。
+Zygote预加载并初始化核心库类。
 
 通常核心类是只读的，是Android SDK或核心框架的一部分。在Java VM中，每个实例都有自己的核心库类文件和堆对象的副本。
 
 简而言之，Zygote是由init进程启动的，基本上只是开始执行并初始化Dalvik VM。
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android_boot_5.png?raw=true)
 
-## 6、系统服务
+## 步骤6、系统服务
 
 系统服务是在系统中运行的第一个java组件。它将启动所有的Android服务，如电话管理器和蓝牙。
 
@@ -101,7 +110,7 @@ Zygote是一个VM进程，它在系统启动时启动，我们在前面的步骤
 ```
 /base/services/java/com/android/server/SystemServer.java
 ```
-
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android_boot_6.png?raw=true)
 
 核心服务:
 1.启动电源管理器
@@ -118,7 +127,7 @@ Zygote是一个VM进程，它在系统启动时启动，我们在前面的步骤
 12.开始蓝牙服务
 13.开始安装服务
 
-其他服务
+其他服务：
 1.启动状态栏服务
 2.开始硬件服务
 3.开始NetStat服务
@@ -134,8 +143,12 @@ Zygote是一个VM进程，它在系统启动时启动，我们在前面的步骤
 13.开始HeadsetObserver
 14.开始AdbSettingsObserver
 
-## 7、启动完成
+## 步骤7、启动完成
 
 一旦系统服务在内存中启动并运行，Android就完成了启动过程，此时“ACTION_BOOT_COMPLETED”标准的广播动作就会触发。
 
+
+欢迎关注Android技术堆栈，专注于Android技术学习的公众号，致力于提高Android开发者们的专业技能！
+
+![Android技术堆栈](https://mmbiz.qpic.cn/mmbiz_jpg/MADc6NnIysDjTRbKsg6y2G5eqqQkPDiak4V8jqKLmntDgAfFE8LOibxnSdfJESLJEM8ibrN9RGiamib4rYCt3cU08aQ/0?wx_fmt=jpeg)
 
