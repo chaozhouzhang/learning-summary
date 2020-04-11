@@ -2,7 +2,8 @@
 
 # 使用aidl进行跨进程通信
 
-![]()
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/Binder%E6%9C%BA%E5%88%B6-Android%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E8%AE%AF/aidl-uml.png?raw=true)
+
 ## 1、首先创建aidl文件，并声明接口：
 ```
 // IRemoteService.aidl
@@ -350,9 +351,27 @@ iRemoteService.getUser("android")
 
 # 1、绑定服务
 
-![]()
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/Binder%E6%9C%BA%E5%88%B6-Android%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E8%AE%AF/aidl-bindService.png?raw=true)
 
+1.1、Activity中通过bindService()方法绑定远程服务RemoteService，具体实现方法是ContextImpl的bindService()方法。
+
+1.2、远程服务RemoteService绑定成功后会回调onBinder()方法，返回远程服务RemoteService的具体实现RemoteServiceImpl()。
+
+1.3、远程服务绑定成功后，会回调onServiceConnected()方法，通知当前进程也就是AidlActivity，远程服务RemoteService已经连接成功，可以获取远程服务的代理进行进程间的通信了。
 # 2、获取服务代理并通过服务代理进行通信
 
-![]()
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/Binder%E6%9C%BA%E5%88%B6-Android%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E8%AE%AF/adil-callService.png?raw=true)
+
+2.1、获取IRemoteService.Stub获取远程服务的代理，也就是IRemoteService.Stub.Proxy。
+
+2.2、通过代理IRemoteService.Stub.Proxy调用远程服务的方法，代理IRemoteService.Stub.Proxy通过asBinder()方法获取BinderProxy调用transact()方法通知远程服务，而transact()方法使用JNI技术调用了native方法transactNative()方法。
+
+2.3、transactNative()方法最后会调用远程服务IRemoteService.Stub的onTransact()方法，onTransact()方法会通过asBinder()方法获取RemoteServiceImpl，并调用RemoteServiceImpl的实际实现方法。
+
+
+
+欢迎关注Android技术堆栈，专注于Android技术学习的公众号，致力于提高Android开发者们的专业技能！
+
+![Android技术堆栈](https://mmbiz.qpic.cn/mmbiz_jpg/MADc6NnIysDjTRbKsg6y2G5eqqQkPDiak4V8jqKLmntDgAfFE8LOibxnSdfJESLJEM8ibrN9RGiamib4rYCt3cU08aQ/0?wx_fmt=jpeg)
+
 
