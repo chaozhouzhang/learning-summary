@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-04-13T16:41:59.901Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36" etag="ynpHRvxWmAtILqFgWrWX" version="12.9.11" type="github">
+<mxfile host="app.diagrams.net" modified="2020-04-13T16:42:31.792Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36" etag="RDJQoMqbZ20qL5dZ5YwT" version="12.9.11" type="github">
   <diagram id="G7wg8Uk2tAzZRFtgVAqS" name="Page-1">
     <mxGraphModel dx="2253" dy="905" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -218,7 +218,7 @@
           <mxGeometry x="988.75" y="270" width="170" height="110" as="geometry" />
         </mxCell>
         <mxCell id="UYqncPUuAHH7SOn4xKhJ-101" value="draw by&amp;nbsp; zhangchaozhou" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontColor=#CC6600;" vertex="1" parent="1">
-          <mxGeometry x="730" y="549.5" width="150" height="20" as="geometry" />
+          <mxGeometry x="753.75" y="549.5" width="150" height="20" as="geometry" />
         </mxCell>
         <mxCell id="UYqncPUuAHH7SOn4xKhJ-102" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="820" y="795" width="170" height="155" as="geometry" />
@@ -392,8 +392,8 @@
         <mxCell id="UYqncPUuAHH7SOn4xKhJ-141" value="onPause()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="569.5" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="UYqncPUuAHH7SOn4xKhJ-147" value="&lt;font style=&quot;font-size: 30px&quot;&gt;欢迎关注公众号：Android技术堆栈&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontColor=#CC6600;" vertex="1" parent="1">
-          <mxGeometry x="583.15" y="460" width="473" height="70" as="geometry" />
+        <mxCell id="UYqncPUuAHH7SOn4xKhJ-147" value="&lt;font style=&quot;font-size: 30px&quot;&gt;欢迎关注微信公众号：Android技术堆栈&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontColor=#CC6600;" vertex="1" parent="1">
+          <mxGeometry x="583.15" y="460" width="526.85" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
