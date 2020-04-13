@@ -5,7 +5,7 @@
 ![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/Binder%E6%9C%BA%E5%88%B6-Android%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E8%AE%AF/aidl-uml.png?raw=true)
 
 ## 1、首先创建aidl文件，并声明接口：
-```
+```java
 // IRemoteService.aidl
 package source.analysis.android29.aidl;
 // Declare any non-default types here with import statements
@@ -17,7 +17,7 @@ interface IRemoteService {
 }
 ```
 ## 2、创建接口需要的Parcelable实体类：
-```
+```java
 public class User implements Parcelable {
     private int age;
     private String nickname;
@@ -86,7 +86,7 @@ public class User implements Parcelable {
 ```
 ## 3、编译后自动生成接口和空的实体类：
 IRemoteService
-```
+```java
 /*
  * This file is auto-generated.  DO NOT MODIFY.
  */
@@ -269,12 +269,12 @@ public interface IRemoteService extends android.os.IInterface {
 ```
 
 User.java
-```
+```java
 // This file is intentionally left blank as placeholder for parcel declaration.
 ```
 ## 4、实现接口方法
 RemoteServiceImpl
-```
+```java
 public class RemoteServiceImpl extends IRemoteService.Stub {
     @Override
     public int getValue() throws RemoteException {
@@ -293,7 +293,7 @@ public class RemoteServiceImpl extends IRemoteService.Stub {
 ```
 ## 5、创建独立进程服务
 RemoteService
-```
+```java
 public class RemoteService extends Service {
     @Nullable
     @Override
@@ -303,18 +303,18 @@ public class RemoteService extends Service {
 }
 ```
 在AndroidManifest.xml中注册独立进程服务：
-```
+```java
 <service android:name=".aidl.RemoteService" android:process=":remote"/>
 ```
 ## 6、绑定独立进程服务
 绑定独立进程服务
-```
+```java
 Intent intent = new Intent(this, RemoteService.class);
 bindService(intent, this, Context.BIND_AUTO_CREATE);
 ```
 
 ## 7、获取独立进程服务代理
-```
+```java
 public class AidlActivity extends AppCompatActivity implements ServiceConnection {
 
 /**
@@ -339,10 +339,10 @@ public void onServiceDisconnected(ComponentName name) {
 
 ## 8、通过独立进程服务代理进行通信
 
-```
+```java
 iRemoteService.getValue()
 ```
-```
+```java
 iRemoteService.getUser("android")
 ```
 
