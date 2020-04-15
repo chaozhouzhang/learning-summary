@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-04-15T07:46:30.856Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36" etag="eQBqj0WG75fEr5xkRPfO" version="12.9.12" type="github" pages="2">
-  <diagram id="bW57GUwkP55EJ2sGAM-z" name="Page-1">
-    <mxGraphModel dx="946" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="app.diagrams.net" modified="2020-04-15T08:04:50.950Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36" etag="2jsYdyYfD_URXIvAq52A" version="12.9.12" type="github" pages="2">
+  <diagram id="bW57GUwkP55EJ2sGAM-z" name="技术堆栈">
+    <mxGraphModel dx="946" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,8 +13,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8GqnMZJ4Uofj3jaBf5WY" name="Page-2">
-    <mxGraphModel dx="946" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="8GqnMZJ4Uofj3jaBf5WY" name="aidl">
+    <mxGraphModel dx="946" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="sG4b8_S-WNLmJSJId91Q-0" />
         <mxCell id="sG4b8_S-WNLmJSJId91Q-1" parent="sG4b8_S-WNLmJSJId91Q-0" />
@@ -23,6 +23,9 @@
         </mxCell>
         <mxCell id="sG4b8_S-WNLmJSJId91Q-3" value="&lt;font color=&quot;#ffffff&quot;&gt;AIDL跨进程流程详解&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Comic Sans MS;fontColor=#CC6600;fontSize=46;" vertex="1" parent="sG4b8_S-WNLmJSJId91Q-1">
           <mxGeometry x="10" y="270" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="W3mHG6dA84y1yrQcxMTU-0" value="公众号：Android技术堆栈" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Comic Sans MS;fontSize=20;fontColor=#FFFFFF;" vertex="1" parent="sG4b8_S-WNLmJSJId91Q-1">
+          <mxGeometry x="280" y="340" width="240" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
