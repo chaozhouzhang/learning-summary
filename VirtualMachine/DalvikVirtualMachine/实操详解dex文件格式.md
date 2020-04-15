@@ -51,6 +51,8 @@ javac HelloWorld.java
 ```
 dx --dex --output=HelloWorld.dex HelloWorld.class
 ```
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/VirtualMachine/DalvikVirtualMachine/HelloWorld-dex.png?raw=true)
+
 3、进入手机系统
 ```
 adb shell
@@ -75,10 +77,25 @@ adb shell dalvikvm -cp /data/local/tmp/dalvik-cache/HelloWorld.dex HelloWorld
 Hello World!
 ```
 
-![]()
 
-# 详解dex文件格式
+# dex文件格式概览
 
+
+
+
+|名称|格式|说明|
+|----|----|----|
+|header|header_item|标头|
+|string_ids|string_id_item[]|字符串标识符列表|
+|type_ids|type_id_item[]|类型标识符列表|
+|proto_ids|proto_id_item[]|方法原型标识符列表|
+|field_ids|field_id_item[]|字段标识符列表|
+|method_ids|method_id_item[]|方法标识符列表|
+|class_defs|class_def_item[]|类定义列表|
+|call_site_ids|call_site_id_item[]|调用点标识符列表|
+|method_handles|method_handle_item[]|方法句柄列表|
+|data|ubyte[]|数据区|
+|link_data|ubyte[]|静态链接文件中使用的数据|
 
 
 
