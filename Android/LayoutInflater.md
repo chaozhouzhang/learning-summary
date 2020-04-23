@@ -56,6 +56,7 @@ public class ViewDrawActivity extends AppCompatActivity {
 ```
 
 运行结果：
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/viewRootNull.png?raw=true)
 
 # 3、LayoutInfalter的源码解析
 
@@ -175,6 +176,7 @@ Caused by: android.view.InflateException: Binary XML file line #2: <merge /> can
     android:text="@string/app_name">
 </Button>
 ```
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/viewRootNull.png?raw=true)
 
 ### 3、attachToRoot==true
 如果root!=null，默认情况下attachToRoot==true，那么给加载的布局文件指定root为父布局，并且直接添加到root布局中，添加时不忽略布局最外层的参数，然后返回View对象。
@@ -192,7 +194,21 @@ public void setContentView(int resId) {
     mAppCompatWindowCallback.getWrapped().onContentChanged();
 }
 ```
-
+我们修改添加Button的方式为root!=null，attachToRoot==true，就可以使得修改Button布局为固定大小产生效果：
+`ViewDrawActivity.java`
+```java
+public class ViewDrawActivity extends AppCompatActivity {
+    private LinearLayout mLinearLayoutMain;
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_view_draw);
+        mLinearLayoutMain = findViewById(R.id.ll_main);
+        //解析获取View对象的同时，添加View到root布局中
+        LayoutInflater.from(this).inflate(R.layout.layout_button, mLinearLayoutMain);
+    }
+}
+```
 ### 4、attachToRoot==false
 如果root!=null，且如果attachToRoot==false，那么给加载的布局文件指定root为父布局，但无法直接添加到root布局中，需要使用addView添加到其他布局中，但不一定非要添加到所传的root布局中，添加时不忽略布局最外层的参数，然后返回View对象。
  
@@ -350,5 +366,12 @@ public final View createView(@NonNull Context viewContext, @NonNull String name,
 
 附上LayoutInflater脑图：
 ![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/LayoutInflater.png?raw=true)
+
+
+欢迎关注Android技术堆栈，专注于Android技术学习的公众号，致力于提高Android开发者们的专业技能！
+
+![Android技术堆栈](https://mmbiz.qpic.cn/mmbiz_jpg/MADc6NnIysDjTRbKsg6y2G5eqqQkPDiak4V8jqKLmntDgAfFE8LOibxnSdfJESLJEM8ibrN9RGiamib4rYCt3cU08aQ/0?wx_fmt=jpeg)
+
+
 
 
