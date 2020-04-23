@@ -165,6 +165,17 @@ Caused by: android.view.InflateException: Binary XML file line #2: <merge /> can
 ### 2、root==null
 直接返回生成的View对象，需要使用addView添加到其他布局中，添加的时候会忽略布局最外层的参数。
 
+也就是说，修改了Button布局为固定大小，最后的加载结果还是不变：
+`layout_button.xml`
+```
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="360dp"
+    android:text="@string/app_name">
+</Button>
+```
+
 ### 3、attachToRoot==true
 如果root!=null，默认情况下attachToRoot==true，那么给加载的布局文件指定root为父布局，并且直接添加到root布局中，添加时不忽略布局最外层的参数，然后返回View对象。
 
@@ -338,6 +349,6 @@ public final View createView(@NonNull Context viewContext, @NonNull String name,
 
 
 附上LayoutInflater脑图：
-
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/LayoutInflater.png?raw=true)
 
 
