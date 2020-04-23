@@ -209,6 +209,7 @@ public class ViewDrawActivity extends AppCompatActivity {
     }
 }
 ```
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/viewRootNotNullAttachToRoot.png?raw=true)
 ### 4、attachToRoot==false
 如果root!=null，且如果attachToRoot==false，那么给加载的布局文件指定root为父布局，但无法直接添加到root布局中，需要使用addView添加到其他布局中，但不一定非要添加到所传的root布局中，添加时不忽略布局最外层的参数，然后返回View对象。
  
