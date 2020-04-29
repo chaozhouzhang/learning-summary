@@ -1,7 +1,9 @@
 
 # Activity对触摸事件的分发流程
 
-
+```
+本文源码基于Android 10.0
+```
 
 首先，用户触摸屏幕之后，会调用Activity的dispatchTouchEvent()方法：
 
@@ -115,9 +117,12 @@ public boolean shouldCloseOnTouch(Context context, MotionEvent event) {
 以上可知，如果触摸事件在边界外，将会结束当前Activity，并且返回true，否则返回false。
 
 
-总结：
+## 总结
 
-![]()
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/View/Activity%E5%AF%B9%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%88%86%E5%8F%91%E6%B5%81%E7%A8%8B.png?raw=true)
+
+## 后续
+ViewGroup和View对触摸事件的分发流程，笔者将在接下来的文章进行讲解，敬请关注。
 
 欢迎关注Android技术堆栈，专注于Android技术学习的公众号，致力于提高Android开发者们的专业技能！
 
