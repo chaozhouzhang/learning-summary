@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-04-29T09:28:09.362Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36" etag="GDSDD8CgX3XHGaCgyJIV" version="13.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-04-29T09:30:29.234Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36" etag="GDsQDwdGmql8vZ_0j6sx" version="13.0.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Activity对触摸事件的分发流程">
     <mxGraphModel dx="524" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -109,19 +109,9 @@
             <mxPoint x="1890" y="1410" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HODczc1Zrsx5R5IMGX4M-97" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HODczc1Zrsx5R5IMGX4M-96">
-          <mxGeometry x="-0.26" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="HODczc1Zrsx5R5IMGX4M-98" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="HODczc1Zrsx5R5IMGX4M-101" target="HODczc1Zrsx5R5IMGX4M-103">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1890" y="1170" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="HODczc1Zrsx5R5IMGX4M-99" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HODczc1Zrsx5R5IMGX4M-98">
-          <mxGeometry x="-0.0222" y="-1" relative="1" as="geometry">
-            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="HODczc1Zrsx5R5IMGX4M-100" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="HODczc1Zrsx5R5IMGX4M-101" target="HODczc1Zrsx5R5IMGX4M-104">
@@ -149,19 +139,9 @@
             <mxPoint x="2230" y="1410" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HODczc1Zrsx5R5IMGX4M-107" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HODczc1Zrsx5R5IMGX4M-106">
-          <mxGeometry x="-0.26" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="HODczc1Zrsx5R5IMGX4M-108" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="HODczc1Zrsx5R5IMGX4M-110" target="HODczc1Zrsx5R5IMGX4M-112">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2230" y="1170" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="HODczc1Zrsx5R5IMGX4M-109" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HODczc1Zrsx5R5IMGX4M-108">
-          <mxGeometry x="-0.0222" y="-1" relative="1" as="geometry">
-            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="HODczc1Zrsx5R5IMGX4M-110" value="return?" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -181,6 +161,18 @@
         </mxCell>
         <mxCell id="HODczc1Zrsx5R5IMGX4M-115" value="ViewGroup对触摸事件的分发流程" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1412.25" y="1420" width="195.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HODczc1Zrsx5R5IMGX4M-117" value="true" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1900" y="1205" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HODczc1Zrsx5R5IMGX4M-118" value="false" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1900" y="1360" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HODczc1Zrsx5R5IMGX4M-119" value="true" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2240" y="1200" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HODczc1Zrsx5R5IMGX4M-120" value="false" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2230" y="1360" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
