@@ -1,14 +1,26 @@
 
-# Activity对触摸事件的分发流程
 
-```
+```java
 本文源码基于Android 10.0
 ```
+
+# 事件
+
+|事件|解释|
+|----|----|
+|ACTION_DOWN|手指初次接触到屏幕时触发|
+|ACTION_MOVE|手指在屏幕上滑动时触发，会多次触发|
+|ACTION_UP|手指离开屏幕时触发|
+|ACTION_CANCEL|事件被上层拦截时触发|
+
+# Activity对触摸事件的分发流程
+
+
 
 首先，用户触摸屏幕之后，会调用Activity的dispatchTouchEvent()方法：
 
 `ViewDispatchActivity.java`
-```
+```java
 @Override
 public boolean dispatchTouchEvent(MotionEvent ev) {
     Log.e("ViewDispatchActivity", "dispatchTouchEvent");
@@ -36,7 +48,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 
 
 `ViewDispatchActivity.java`
-```
+```java
 @Override
 public void onUserInteraction() {
     Log.e("ViewDispatchActivity", "onUserInteraction");
@@ -45,7 +57,7 @@ public void onUserInteraction() {
 ```
 `Activity.java`
 也就是：
-```
+```java
 public void onUserInteraction() {
 }
 ```
@@ -70,7 +82,7 @@ public boolean superDispatchTouchEvent(MotionEvent event) {
 ```
 继续看下ViewGroup：
 `ViewGroup.java`
-```
+```java
 @Override
 public boolean dispatchTouchEvent(MotionEvent ev) {
 	......
@@ -81,7 +93,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 ## Activity.onTouchEvent()
 3、如果Window抽象类的实现类PhoneWindow的superDispatchTouchEvent()方法返回false，则调用onTouchEvent()方法。
 `ViewDispatchActivity.java`
-```
+```java
 @Override
 public boolean onTouchEvent(MotionEvent event) {
     Log.e("ViewDispatchActivity","onTouchEvent");
@@ -90,7 +102,7 @@ public boolean onTouchEvent(MotionEvent event) {
 ```
 也就是：
 `Activity.java`
-```
+```java
 public boolean onTouchEvent(MotionEvent event) {
     if (mWindow.shouldCloseOnTouch(this, event)) {
         finish();
@@ -103,7 +115,7 @@ public boolean onTouchEvent(MotionEvent event) {
 
 继续看下Window的shouldCloseOnTouch()方法：
 `Window.java`
-```
+```java
 public boolean shouldCloseOnTouch(Context context, MotionEvent event) {
     final boolean isOutside =
             event.getAction() == MotionEvent.ACTION_UP && isOutOfBounds(context, event)
