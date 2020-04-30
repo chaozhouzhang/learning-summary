@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-04-30T15:52:00.834Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36" etag="-5Vc4mQ6FSb1gUpAfoTG" version="13.0.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-04-30T15:53:45.102Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36" etag="R8fml2LOKXQjeUvSDBnC" version="13.0.2" type="github" pages="2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Activity对触摸事件的分发流程">
     <mxGraphModel dx="599" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -437,11 +437,17 @@
         <mxCell id="B86tjSk1nsdt77BXMjpa-12" value="true" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="aWblbmXk0iI_CU1y4ZaA-1">
           <mxGeometry x="1776.25" y="1700" width="40" height="20" as="geometry" />
         </mxCell>
+        <mxCell id="B86tjSk1nsdt77BXMjpa-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="aWblbmXk0iI_CU1y4ZaA-1" source="B86tjSk1nsdt77BXMjpa-13" target="B86tjSk1nsdt77BXMjpa-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="B86tjSk1nsdt77BXMjpa-13" value="View&lt;br&gt;dispatchTouchEvent" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="aWblbmXk0iI_CU1y4ZaA-1">
           <mxGeometry x="1380" y="1970" width="265" height="40" as="geometry" />
         </mxCell>
         <mxCell id="B86tjSk1nsdt77BXMjpa-14" value="微信公众号：Android技术堆栈" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;glass=0;strokeWidth=1;shadow=0;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="aWblbmXk0iI_CU1y4ZaA-1">
           <mxGeometry x="1780" y="1200" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="B86tjSk1nsdt77BXMjpa-15" value="View&lt;br&gt;对触摸事件的分发流程" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="aWblbmXk0iI_CU1y4ZaA-1">
+          <mxGeometry x="1380" y="2090" width="265" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
