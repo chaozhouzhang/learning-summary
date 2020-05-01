@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-05-01T03:36:04.264Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36" etag="Nnq1ESTolaCoEhQ9P69H" version="13.0.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-05-01T03:36:21.530Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36" etag="9jNvzxch1_Z_ORn5HdNF" version="13.0.2" type="github" pages="2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Activity对触摸事件的分发流程">
     <mxGraphModel dx="599" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -196,7 +196,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3jxjMKvrWIV5sAnKLOmF" name="ViewGroup对触摸事件的分发流程">
+  <diagram id="3jxjMKvrWIV5sAnKLOmF" name="触摸事件的分发流程">
     <mxGraphModel dx="851" dy="887" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="aWblbmXk0iI_CU1y4ZaA-0" />
