@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-04-16T14:12:47.723Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36" etag="uF_z065-lYil_t314_cR" version="12.9.12" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-05-29T06:21:23.612Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="wsgPl3taAwrrC1GZFf1k" version="13.1.6" type="github" pages="2">
   <diagram id="G7wg8Uk2tAzZRFtgVAqS" name="Page-1">
-    <mxGraphModel dx="1773" dy="583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2404" dy="965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -392,14 +392,14 @@
         <mxCell id="UYqncPUuAHH7SOn4xKhJ-141" value="onPause()" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="40" y="569.5" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="UYqncPUuAHH7SOn4xKhJ-147" value="&lt;font style=&quot;font-size: 30px&quot;&gt;欢迎关注微信公众号：Android技术堆栈&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontColor=#CC6600;" parent="1" vertex="1">
+        <mxCell id="UYqncPUuAHH7SOn4xKhJ-147" value="&lt;font style=&quot;font-size: 30px&quot;&gt;欢迎关注公众号：Android技术堆栈&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontColor=#CC6600;" parent="1" vertex="1">
           <mxGeometry x="583.15" y="460" width="526.85" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="0A-GXHLiJepS7fmgTdt7" name="Page-2">
-    <mxGraphModel dx="946" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="946" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="Gk0DgezSpglmg93WznL8-0" />
         <mxCell id="Gk0DgezSpglmg93WznL8-1" parent="Gk0DgezSpglmg93WznL8-0" />
