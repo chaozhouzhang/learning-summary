@@ -1,6 +1,6 @@
 # StartActivity流程概览
 
-
+![](https://github.com/chaozhouzhang/learning-summary/blob/master/Android/StartActivity.png?raw=true)
 
 ## 1、在APP进程发起startActivity
 在Activity中的startActivityForResult()调用Instrumentation的execStartActivity()：
@@ -280,4 +280,35 @@ final void performCreate(Bundle icicle, PersistableBundle persistentState) {
 ```
 
 
+
+
+
+
+## 推荐文章：
+
+1. [通过学习Handler源码，手写子线程间的通信](https://mp.weixin.qq.com/s?__biz=MzU3NzQ0MzYxMg==&mid=2247483708&idx=1&sn=e81d8d4e2d920fa783e6ec686937bd38&chksm=fd05c34fca724a59471a26d9f037b6423684f2c2a5a6cc5ef8907712aa67c167fbbb95f92bf4&token=268590831&lang=zh_CN#rd)
+
+2. [通过代码例子详解aidl跨进程通信的调用流程](https://mp.weixin.qq.com/s?__biz=MzU3NzQ0MzYxMg==&mid=2247483748&idx=1&sn=e24bf4ff4730d9f03e0b8b514ba3a7e4&chksm=fd05c317ca724a01c8e0f8db07d2a566d1aa9472380c8b3ec1c2aa22c6c3c08c0d53ff3997dc&token=268590831&lang=zh_CN#rd)
+
+3. [Java实现十大排序算法（上）](https://mp.weixin.qq.com/s?__biz=MzU3NzQ0MzYxMg==&mid=2247483774&idx=1&sn=e9985d17794c237515fc658037930702&chksm=fd05c30dca724a1beeeebf32f9b81abd9bc825c2cebffec7c9033bb430e156038e9c3faf4519&token=268590831&lang=zh_CN#rd)
+
+
+<center>技术交流，欢迎加我微信：HackerFeeling，拉你入技术交流群。</center>
+
+
+
+![](https://mmbiz.qpic.cn/mmbiz_png/MADc6NnIysCPMbmaK9pxa0Eapy3srCfULCcsmic2gkjAHVlcFoAkQs0icZUalA1JBXnzDKJhTBboOEmCXMS6PS3Q/0?wx_fmt=png)
+
+
+
+<center>扫码关注公众号【Android技术堆栈】，一起学习Android技术。</center>
+
+
+
+![](https://mmbiz.qpic.cn/mmbiz_png/MADc6NnIysCPMbmaK9pxa0Eapy3srCfUrBoO7P62vEeKEkHnnHG2iajQ4ODRKtbBj8tJKb1656K4ZDre4F8ub4g/0?wx_fmt=png)
+
+
+
+
+<p align="right">喜欢就点个<span style="color:blue;">「在看」</span>吧 ▽</p>
 
