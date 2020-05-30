@@ -1,0 +1,268 @@
+package com.andy.alibaba;
+
+
+import java.util.EmptyStackException;
+import java.util.Stack;
+
+/**
+ * 设计一个逻辑表达式计算器
+ * <p>
+ * 表达式定义：
+ * 输入运算符包括 '&','|','!'
+ * 运算符优先级 ! > & > |，有括号优先计算括号内表达式
+ * 输入计算值为 '1' 表示'true'，'0'表示'false'
+ * 输入字符串可能有空格
+ * <p>
+ * 示例：
+ * 输入："1"			        输出：true
+ * 输入："1 & 0" 			输出：false
+ * 输入："1|0"  			    输出：true
+ * 输入："1|(1&0)"			输出：true
+ * 输入："1|1&0"			    输出：true
+ * 输入："1&0|0&1"			输出：false
+ * 输入："!0&1|0"			输出：true
+ * 输入："((!0&1))|0"		输出：true
+ * <p>
+ * 要求：
+ * 1.5h内完成，编程语言用java，请自己设计测试用例并测试。
+ * 以下代码只是基础框架，可以自己增加方法
+ */
+public class LogicOperation {
+
+    /**
+     * 操作符
+     * 各个操作符按照优先级排序
+     */
+    public enum Operator {
+        CHAR_INIT,
+        CHAR_RIGHT, // )
+        CHAR_OR, // |
+        CHAR_AND, // &
+        CHAR_NO, // !
+        CHAR_LEFT // (
+    }
+
+    /**
+     * 表达式计算
+     *
+     * @param expression
+     * @return
+     */
+    public static boolean operation(final String expression) {
+        // 边界条件 如果为空，则返回false
+        if (expression == null || "".equals(expression.trim())) {
+            return false;
+        }
+        String realExpression = expression.trim();
+        int length = realExpression.length();
+        int position = 0;
+        char c = '0';
+        Operator lastOperator = Operator.CHAR_INIT;
+        Operator currentOperator = Operator.CHAR_INIT;
+        boolean isOperator = false; // 是否是操作符
+        Stack<Boolean> operateNumStack = new Stack();  // 存放操作数的栈
+        Stack<Operator> operatorStack = new Stack(); // 存放操作符号的栈
+        while (position < length) {
+            c = realExpression.charAt(position);
+            if (c == ' ') {
+                position++;
+                continue;
+            }
+            switch (c) {
+                case '0':
+                    if (position != 0 && !isOperator) { // 如果是两个连续的操作数，不合法
+                        System.out.println("两个连续的操作数");
+                        return false;
+                    }
+                    isOperator = false;
+                    operateNumStack.push(Boolean.FALSE);
+                    break;
+                case '1':
+                    if (position != 0 && !isOperator) { // 如果是两个连续的操作数，不合法
+                        System.out.println("两个连续的操作数");
+                        return false;
+                    }
+                    isOperator = false;
+                    operateNumStack.push(Boolean.TRUE);
+                    break;
+                case '(':
+                    isOperator = true;
+                    currentOperator = Operator.CHAR_LEFT;
+                    break;
+                case '!':
+                    isOperator = true;
+                    currentOperator = Operator.CHAR_NO;
+                    break;
+                case '&':
+                    isOperator = true;
+                    currentOperator = Operator.CHAR_AND;
+                    break;
+                case '|':
+                    isOperator = true;
+                    currentOperator = Operator.CHAR_OR;
+                    break;
+                case ')':
+                    isOperator = true;
+                    currentOperator = Operator.CHAR_RIGHT;
+                    break;
+                default:
+                    System.out.println("非法字符，返回false");
+                    return false;
+            }
+            if (isOperator) {
+                // 第一次遇到操作符
+                if (operatorStack.empty()) {
+                    operatorStack.push(currentOperator);
+                    lastOperator = currentOperator;
+                } else {
+                    if (!lastOperator.equals(Operator.CHAR_LEFT) && currentOperator.compareTo(lastOperator) <= 0) { // 当前的操作符没有上个优先级高，则先计算上个操作
+                        lastOperator = caculateOperate(lastOperator, operatorStack, operateNumStack);
+                    }
+
+                    // 当前（） 计算完 出栈
+                    if (!operatorStack.empty()) {
+                        if (currentOperator.equals(Operator.CHAR_RIGHT)) {
+                            // 把（）里的运行计算完
+                            lastOperator = ca(operatorStack, operateNumStack);
+                            // 把（）出栈 并获取栈顶操作符
+                            if (lastOperator == Operator.CHAR_LEFT && currentOperator.equals(Operator.CHAR_RIGHT)) {
+                                operatorStack.pop();
+                                if (!operatorStack.empty()) {
+                                    lastOperator = operatorStack.peek();
+                                }
+                            }
+                        } else {
+                            operatorStack.push(currentOperator);
+                            lastOperator = currentOperator;
+                        }
+                    } else {
+                        operatorStack.push(currentOperator);
+                        lastOperator = currentOperator;
+                    }
+                }
+
+            }
+            // 最后一个
+            if (position == length - 1) {
+                // 依次计算操作符
+                if(caculate(operatorStack, operateNumStack) && operateNumStack.size() == 1) {
+                    return operateNumStack.pop();
+                } else {
+                    System.out.println("操作符已经全部操作完毕，而操作数多于1个，则报错");
+                    return false;
+                }
+            }
+            position++;
+        }
+        //TODO:
+        return true;
+    }
+
+    /**
+     * 计算完（）里的计算
+     *
+     * @param operatorStack
+     * @param operateNumStack
+     * @return
+     */
+    static Operator ca(Stack<Operator> operatorStack, Stack<Boolean> operateNumStack) {
+        Operator lastOperator;
+        while ((lastOperator = operatorStack.peek()) != Operator.CHAR_LEFT) {
+            if (lastOperator.equals(Operator.CHAR_NO)) {
+                Boolean top = operateNumStack.pop();
+                operatorStack.pop();
+                operateNumStack.push(!top);
+            } else {
+                Boolean num1 = operateNumStack.pop();
+                Boolean num2 = operateNumStack.pop();
+                operatorStack.pop();
+                Boolean result = operate(num1, num2, lastOperator);
+                operateNumStack.push(result);
+            }
+        }
+        return lastOperator;
+    }
+
+    /**
+     * 单个操作符的计算
+     *
+     * @param lastOperator
+     * @param operatorStack
+     * @param operateNumStack
+     * @return
+     */
+    public static Operator caculateOperate(Operator lastOperator, Stack<Operator> operatorStack, Stack<Boolean> operateNumStack) {
+        if (lastOperator.equals(Operator.CHAR_NO)) { // 单操作数的操作符
+            Boolean top = operateNumStack.pop();
+            operatorStack.pop();
+            operateNumStack.push(!top);
+        } else { // 双操作数
+            Boolean num1 = operateNumStack.pop();
+            Boolean num2 = operateNumStack.pop();
+            operatorStack.pop();
+            Boolean result = operate(num1, num2, lastOperator);
+            operateNumStack.push(result);
+        }
+        return lastOperator;
+    }
+
+    /**
+     * 最后的计算
+     *
+     * @param operatorStack
+     * @param operateNumStack
+     */
+    private static boolean caculate(Stack<Operator> operatorStack, Stack<Boolean> operateNumStack) {
+        while (!operatorStack.empty()) {
+            Operator lastOperator = operatorStack.pop();
+            if (lastOperator.equals(Operator.CHAR_RIGHT) || lastOperator.equals(Operator.CHAR_LEFT)) {
+                System.out.println("多余的字符 ");
+                return false;
+            }
+            try {
+                if (lastOperator.equals(Operator.CHAR_NO)) {
+                    Boolean top = operateNumStack.pop();
+                    operateNumStack.push(!top);
+                } else {
+                    Boolean num1 = operateNumStack.pop();
+                    Boolean num2 = operateNumStack.pop();
+
+                    Boolean result = operate(num1, num2, lastOperator);
+                    operateNumStack.push(result);
+                }
+            }catch (EmptyStackException e) {
+                System.out.println("不合法的操作符数目");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * 实际计算
+     *
+     * @param num1
+     * @param num2
+     * @param operator
+     * @return
+     */
+    private static Boolean operate(Boolean num1, Boolean num2, Operator operator) {
+        switch (operator) {
+            case CHAR_AND:
+                return num1 & num2;
+            case CHAR_OR:
+                return num1 | num2;
+            default:
+                return Boolean.FALSE;
+        }
+    }
+
+    public static void main(String[] args) {
+        String expression = "(1&(1&1)&1&((1|1&0|1&0))|((1|1))";
+//        String expression = "((!0&1))|11";
+        boolean result = operation(expression);
+        System.out.println(result);
+
+//        Assert.
+    }
+}

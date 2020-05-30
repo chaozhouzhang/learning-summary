@@ -1,0 +1,22 @@
+1、ListView和RecyclerView的使用，它们有什么区别？
+
+2、既然RecyclerView在很多方面能取代ListView，Google为什么没把ListView划上一条过时的横线？
+
+ListView采用的是RecyclerBin的回收机制，在一些轻量级的List显示时效率更高！
+在处理少量数据使用 ListView
+在处理大量数据的时候使用 RecyclerView
+
+
+
+ListView：
+1、N个item中只有可见的item，也就是满屏显示的Item数目存在内存中，其他的会在Recycler中回收。
+
+
+convertView在getView中是空(null)的，第一次都是为空的，只要显示过了convertView都不为空，会保存在Recycler中
+
+当item1滚出屏幕，并且一个新的项目从屏幕低端上来时，ListView再请求一个type1视图。convertView此时不是空值 了，它的值是item1。你只需设定新的数据然后返回convertView，不必重新创建一个视图，省去了inflate和findViewById的 时间，性能就得到了优化。
+
+只会创建显示满屏的convertView，这就大大节省了内存，对viewHolder的Tag的使用也大大节省了性能开销
+
+
+
